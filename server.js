@@ -1,3 +1,11 @@
-import express from "express";
+import express from "express"
+import dotenv  from 'dotenv'
 
-import
+dotenv.config();
+const app = express();
+app.use(express.json());
+
+app.get('/', (req, res) => {
+res.send("server is running...");
+
+});
